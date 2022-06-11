@@ -1,0 +1,118 @@
+body {
+background-color: rgb(182, 231, 231);
+background-image:url(../imagem/Fiorino.jpg);  
+display: blocks;
+}
+
+input[type=test]{
+width: 100%;
+padding: 20px 100px;
+margin: 50px 10;
+box-sizing: border-box;
+border-radius: 30%;
+height: auto;
+}
+
+h2 {
+text-align-last:center;color: rgb(8, 12, 12);
+}
+
+div {
+text-align:center;color: rgb(44, 45, 48);
+}
+
+h1{
+text-align:center;color: rgb(110, 131, 199);
+}
+
+p.center {
+text-align: center;color: rgb(15, 36, 36);
+}
+
+h3 { color: rgb(105, 143, 143);
+text-transform:none;
+}
+
+img{
+margin-right: auto;
+}
+
+img a{
+display: block;
+margin: auto;
+}  
+
+ul{
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+overflow: hidden;
+}
+
+li {
+float: left;
+}
+
+*{margin: 0; padding: 0;
+}
+
+li a {
+padding: 5px 5px; 
+margin:0;
+border: 0px solid rgb(208, 212, 216); 
+background: rgb(218, 222, 224);
+text-decoration: none;
+transition:none;
+text-transform: uppercase;
+color:#FFF;
+}
+
+li a:hover {
+background: #CCC;
+color: rgb(56, 15, 95); 
+border-color: #000;
+}
+
+.field{
+text-align: center;
+background-color: rgb(229, 229, 240);
+width: 300px;
+padding: 50px;
+height: auto;
+border: 1px solid rgb(52, 51, 148);
+margin: auto;
+border-radius: 8%;
+}
+
+h4 {
+text-align-last:right;color: rgb(14, 28, 29);
+}
+
+tr{
+font-size: 26px;
+ text-align: center;
+}
+
+
+input{text-align: center;
+    width: auto;
+    
+}
+
+#tudo{
+position:relative;
+}
+ 
+#rodape{
+position:absolute;
+bottom: 0;
+width:5%;
+height: 0px;
+border-color: rgb(0, 0, 0);
+text-align:right;
+line-height: 40px;
+}
+
+   
+
+  
