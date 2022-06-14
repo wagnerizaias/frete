@@ -36,7 +36,7 @@ if(!isset($_SESSION["usuarioEmail"]) || !isset($_SESSION["usuarioSenha"])){
         <label for="trecho">Destino:</label>
         <textarea id="trecho" name="trecho" rows="5" cols="33"> 
         </textarea>   <br>
-        <label for="titulo_trecho">Local:</label>
+        <label for="titulo_trecho">Telefone:</label>
         <input type="text" id="tefone" name="telefone" placeholder="Digite seu telefone*" required> <br><br><br>       
                
          <input type="submit" name="acao" value="Gravar">        

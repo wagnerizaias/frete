@@ -9,6 +9,6 @@ $cod_trecho= $_POST['codigo_trecho'];
 
 $excluir = new crud();
 
-$excluir->excluir_Livro($cod_trecho);
+$excluir->excluir_frete($cod_trecho);
 }      
    

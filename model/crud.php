@@ -6,7 +6,7 @@ require "conectarr.php";
 
 class crud {    
 
- function inserir_Usuario($email, $nome, $telefone, $desejo, $senha, $confirma, $mensagem){
+ function inserir_usuario($email, $nome, $telefone, $desejo, $senha, $confirma, $mensagem){
  
 
    $conn= conectar();   
@@ -61,7 +61,7 @@ class crud {
 
   }
   
-  function inserir_Livro($trech,$titulo_trecho,$trecho){ 
+  function inserir($trech,$titulo_trecho,$trecho){ 
 
     $conn= conectar();   
  
@@ -75,7 +75,7 @@ class crud {
 
    
 
-   public function excluir_Livro ($cod_trecho){
+   public function excluir_frete ($cod_trecho){
 
     $conn= conectar();   
     
@@ -107,7 +107,7 @@ class crud {
    }
 
 
-   public function alterar_livro($cod_trecho, $titulo_trecho,$trecho){
+   public function alterar($cod_trecho, $titulo_trecho,$trecho){
 
     $conn= conectar(); 
     
@@ -120,9 +120,9 @@ class crud {
 	      }else{		
 
 		
-          $result_livro = "UPDATE frete SET nome = '$titulo_trecho', distino = '$trecho' WHERE id = '$cod_trecho'";
+          $result_frete = "UPDATE frete SET loca = '$titulo_trecho', distino = '$trecho' WHERE id = '$cod_trecho'";
 
-         mysqli_query($conn,$result_livro);
+         mysqli_query($conn,$result_frete);
 
              if(mysqli_affected_rows($conn) != 0){
             echo "
@@ -145,8 +145,77 @@ class crud {
 
 
    }
-  }
+  
 
   
 
+  public function alterar_senha( $email, $senha, $confirma){
+
+    $conn= conectar(); 
+    
+  	$pegacod_trecho = mysqli_query($conn, "SELECT * FROM cadastro_geral WHERE email= '$email'");
+
+         if(mysqli_num_rows($pegacod_trecho) == 0){
+
+	    	echo "<script language='javascript' type='text/javascript'>alert('Este Código NÃO esta cadastrado em nossos registros');window.location.href='../View/senha.html'</script>";
+
+	      }else{		
+
+		
+          $result_livro = "UPDATE cadastro_geral SET  senha='$senha', confirma='$confirma' WHERE email = '$email'";
+
+         mysqli_query($conn,$result_livro);
+
+             if(mysqli_affected_rows($conn) != 0){
+            echo "
+
+                 <script language='javascript' type='text/javascript'>alert('Cadastro alterado com sucesso!');window.location.href='../View/login.html'</script>";
+                 
+            
+             }else{
+                  echo " 
+                   <script language='javascript' type='text/javascript'>alert('Nao foi possivel alterar este trecho');window.location.href='../View/senha.html'</script>";
+                     
+                  
+                     
+              }
+
+
+        }
+
+
+        function buscar($buscar){
+       
+   
+          $conn= conectar();  
+   
+          $result_usuario = "SELECT * FROM cadastro1  WHERE nome= '$buscar'  LIMIT 1";
+          
+          $resultado_usuario = mysqli_query($conn, $result_usuario);
+          
+          $resultado = mysqli_fetch_assoc($resultado_usuario);
+          
+         
+          if(isset($resultado)){
+      
+              $_SESSION['usuarioEmail'] = $resultado['email'];            		
+              $_SESSION['usuarioSenha'] = $resultado['senha'];  
+              $_SESSION['nome'] = $resultado['nome'];
+              $_SESSION['id'] = $resultado['id'];
+              header("Location: ../View/usuario.php");           
+     
+          
+          }else{            
+         
+            echo"<script language='javascript' type='text/javascript'>alert('Login e/ou Senha incorretos');window.location.href='../View/perfil';</script>";
+           
+          }
+      
+  
+    }
+
+
+   }
+  }
+  
 

@@ -16,26 +16,28 @@ if(!isset($_SESSION["usuarioEmail"])  || !isset($_SESSION["id"])|| !isset($_SESS
 ?>
 <html>
 <head>
-<title>Consulta Trechos de Livros</title>
+<title>Consulta </title>
  <meta charset="UTF-8">
  <link rel="stylesheet" type="text/css"  href="../View/css/menu.css"> 
 </head>
 <body>
-<div>
-
-<?php echo "<span>"; echo "Olá, "; echo "</span>"; echo "<span>"; echo $_SESSION['usuarioEmail']; echo "</span>";?>
+<div><br><br><br>
+<h2>Seja bem vindo.</h2><br>
+<h1><?php echo "<span>"; echo "Olá, "; echo "</span>"; echo "<span>"; echo $_SESSION['nome']; echo "</span>";?></h1><br>
 <h1>Consulta <?php echo "<span>"; echo "destino "; echo "</span>"; echo "<span>"; echo $_SESSION['id']; echo "</span>";?>.</h1><br><br>
 
 <form  class="formulario" action="../View/usuario.php">
     <input type="submit" value="Voltar">
 </form><br>
-<table border="1" width="100%" height="40%">
+
+<table background="../View/imagem/carro.jpg"width="100%" height="40%">
  <h1> <tr>
-    <th>ID    </th>
-    <th>Nome</th>
-    <th>Local</th>	
-    <th>Destino</th>	
-    <th>Telefone</th>
+ 
+ <th >ID    </th>
+    <th >Nome</th>
+    <th >Local</th>	
+    <th >Destino</th>	
+    <th >Telefone</th>
   </tr>  
   
   <?php 

@@ -11,6 +11,6 @@ $trecho = $_POST["trecho"];
 
 $alterar = new crud();
 
-$alterar->alterar_livro($cod_trecho,$titulo_trecho,$trecho);
+$alterar->alterar($cod_trecho,$titulo_trecho,$trecho);
 }      
    

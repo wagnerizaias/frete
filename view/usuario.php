@@ -1,3 +1,5 @@
+
+
 <?php
 session_start();
             
@@ -22,17 +24,17 @@ if(!isset($_SESSION["usuarioEmail"])|| !isset($_SESSION["nome"]) || !isset($_SES
 <body>
 <div>
 
-<?php echo "<span>"; echo "Olá, "; echo "</span>"; echo "<span>"; echo $_SESSION['usuarioEmail']; echo "</span>";?>
-<br><br>
-<?php echo "<span>"; echo "Seja Bem-Vinda: "; echo "</span>"; echo "<span>"; echo $_SESSION['nome']; echo "</span>";?>
+<h1><?php echo "<span>"; echo "Olá, "; echo "</span>"; echo "<span>"; echo $_SESSION['usuarioEmail']; echo "</span>";?>
+<br><br></h1>
+<h1><?php echo "<span>"; echo "Seja Bem-Vinda: "; echo "</span>"; echo "<span>"; echo $_SESSION['nome']; echo "</span>";?></h1>
 <br>
-<fieldset>
-<legend>Perfil usuario.</legend>
+<h2><fieldset>
+<h2><legend>Perfil usuario.</legend></h2>
 <a href="perfil.php">Consulta</a><br><br>
-</fieldset>
+</fieldset></h2>
 <br>
 
-
+<a href="../Controller/consulta_frete.php"><button>Consulta de frete.</button></a><br><br>
 
 <form action="sair.php">
 <input type="submit" value="Deslogar" name="deslogar">
@@ -58,8 +60,8 @@ if(!isset($_SESSION["usuarioEmail"]) || !isset($_SESSION["usuarioSenha"])){
 
 <body>
     <div class="header">  
-<h1>Qual seu destino:</h1>
-    
+<h1>Qual seu destino:</h1>    
+
 <h1>  <?php echo "<span>"; echo ""; echo "</span>"; echo "<span>"; echo $_SESSION['nome']; echo "</span>";?> <br><br></h1>
    <form class="formulario" method="POST" action="../Controller/cadastrar_frete.php"> 
 
