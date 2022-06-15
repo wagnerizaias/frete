@@ -184,38 +184,12 @@ class crud {
         }
 
 
-        function buscar($buscar){
-       
-   
-          $conn= conectar();  
-   
-          $result_usuario = "SELECT * FROM cadastro1  WHERE nome= '$buscar'  LIMIT 1";
-          
-          $resultado_usuario = mysqli_query($conn, $result_usuario);
-          
-          $resultado = mysqli_fetch_assoc($resultado_usuario);
-          
-         
-          if(isset($resultado)){
-      
-              $_SESSION['usuarioEmail'] = $resultado['email'];            		
-              $_SESSION['usuarioSenha'] = $resultado['senha'];  
-              $_SESSION['nome'] = $resultado['nome'];
-              $_SESSION['id'] = $resultado['id'];
-              header("Location: ../View/usuario.php");           
-     
-          
-          }else{            
-         
-            echo"<script language='javascript' type='text/javascript'>alert('Login e/ou Senha incorretos');window.location.href='../View/perfil';</script>";
-           
-          }
-      
+        
   
     }
 
 
-   }
+   
   }
   
 

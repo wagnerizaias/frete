@@ -27,11 +27,11 @@ if(!isset($_SESSION["usuarioEmail"]) || !isset($_SESSION["usuarioSenha"])){
    <form class="formulario" method="POST" action="../Controller/contole_alterar.php"> 
     <p> Alterar Trecho</p>
     <div class="header">
-        <label for="codigo_trecho"> ID:</label>
-        <input type="text" id="Local" name="codigo_trecho" placeholder="Digite ID viagem">    <br> <br> <br> 
-        <label for="titulo_trecho">Local:</label>
-        <input type="text" id="titulo_trecho" name="titulo_trecho" placeholder="Digite sua localizaçao"> <br><br><br>           
-        <label for="trecho">Destino/ dados veiculo:</label>
+        <h3><label for="codigo_trecho"> ID:</label></h3><br>
+        <input type="text" id="Local" name="codigo_trecho" placeholder="Digite ID viagem">    <br>  
+        <h3><label for="titulo_trecho">Local:</label></h3><br>
+        <input type="text" id="titulo_trecho" name="titulo_trecho" placeholder="Digite sua localizaçao"> <br>           
+        <h3><label for="trecho">Destino/ dados veiculo:</label></h3><br>
         <textarea id="trecho" name="trecho" rows="5" cols="33"> 
         </textarea>    <br>        
         <input type="submit" name="acao" value="Alterar ">        

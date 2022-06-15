@@ -66,16 +66,16 @@ if(!isset($_SESSION["usuarioEmail"]) || !isset($_SESSION["usuarioSenha"])){
    <form class="formulario" method="POST" action="../Controller/cadastrar_frete.php"> 
 
    <h2><label for="titulo_trecho">Nome:</label></h2>
-        <input type="text" id="nome" name="nome" placeholder="Digite o Título do trecho*" required> <br><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome.*" required> <br><br>
 
         <h2><label for="titulo_trecho">Local:</label></h2>
-        <input type="text" id="titulo_trecho" name="titulo_trecho" placeholder="Digite sua localização" required> <br><br>       
+        <input type="text" id="titulo_trecho" name="titulo_trecho" placeholder="Digite sua localização." required> <br><br>       
     
-        <h2><label for="trecho">Tipo veiculo Destino:</label></h2><br>
-        <textarea id="trecho" name="trecho" rows="5" cols="33"> 
+        <h2><label for="trecho">Tipo veiculo<br> Destino:</label></h2><br>
+        <textarea id="trecho" name="trecho" rows="5" cols="33"  required> 
         </textarea>          
        <h2><label for="telefone">Telefone:</label></h2>
-        <input type="text" id="telefone" name="telefone" placeholder="Digite o Título do trecho*" required> <br><br>
+        <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone.*" required> <br><br>
    
          <input type="submit" name="acao" value="Gravar">    <br>    
         </div>   
