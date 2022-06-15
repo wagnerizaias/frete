@@ -8,8 +8,8 @@ $email= $_POST['email'];
 $nome= $_POST['nome'];
 $telefone= $_POST['telefone'];
 $desejo= $_POST['novidades'];
-$senha = $_POST['senha'];
-$confirma = $_POST['Confirma'];
+$senha = md5($_POST['senha']);
+$confirma = md5($_POST['senha']);
 $mensagem= $_POST['mensagem'];
 
 

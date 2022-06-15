@@ -7,13 +7,11 @@
   
   
     $email= $_POST ['email'];
-    $senha=md5($_POST['senha']);
-    $confirma=md5( $_POST ['senha']);
+    $senha = md5($_POST['senha']);
+    $confirma = md5($_POST['senha']);
+    
    
-    
-    
 
-    
     $alterar = new crud();
     
     
